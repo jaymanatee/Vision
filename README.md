@@ -1,78 +1,56 @@
-<a href="https://x.com/nearcyan/status/1706914605262684394">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/cvi-icai-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="assets/cvi-icai-light.png">
-    <img alt="Descripción de la imagen" src="assets/cvi-icai-light.png">
-  </picture>
-</a>
+# 📷 Camera Calibration, Pattern Detection, and Object Tracking on Raspberry Pi
 
+This project implements a camera calibration tool, pattern detection for a visual password system, and object tracking using OpenCV and Python on a Raspberry Pi with a PiCamera. The object tracker is integrated into a fun "paint" application, allowing you to draw with your hand or any object!
 
-**Welcome to the repository for the *Computer Vision I* course at Comillas ICAI**. Here, you will find all the necessary files to complete the 4 lab sessions of the course, as well as a final lab project. 💻📷
+## 🌟 Features
 
-The topics we will cover are:
+### 1. 🛠️ Camera Calibration
 
-* [x] **Lab 1:** Camera Calibration
-* [x] **Lab 2:** Image Processing
-* [x] **Lab 3:** Features Extraction and Bag of Words
-* [x] **Lab 4:** Object Tracking
-* [ ] **Project:** 🛠️ Raspberry Pi 4 + Camera 🛠️ 
+- Use chessboard images to calibrate the camera and remove distortion.
+- Computes camera matrix and distortion coefficients.
 
-Each structured session is designed to be completed in 2 hours in the lab. The additional, non-guided questions we propose in the lab manual are intended as homework to be done outside of class time.
+### 2. 🎨 Pattern Detection (Visual Password System)
 
-## Student Requirements
+- Detects geometric shapes such as squares, rectangles, and circles.
+- Enables a "visual password" system where the user shows a sequence of shapes as the password.
+- Put each shape into the camera until the percentage reaches 100%, if the password is correct, you will move on.
 
-As a student, you are expected to have a basic knowledge of Python. Some exercises are self-contained, but having a basic understanding of the theoretical concepts behind each lab session is highly recommended. The course at ICAI is structured so that enrolled students will always have a theory lesson prior to the lab session.
+### 3. 🔠 Object Tracking with Paint Application
 
-For students outside ICAI or not enrolled in the course, we will provide relevant links for each lab session to help you get an introduction to the topic.
+- Tracks moving objects using:
+  - **Kalman Filter**: Predicts the motion of the object.
+  - **MOG (Mixture of Gaussians) Background Subtraction**: Isolates moving objects from the background.
+- Integrated into a "paint" application where you can draw on the screen by moving an object in front of the camera. Click left Mousebutton to draw.
 
-## Resources
+## 📊 Requirements
 
-Each laboratory session contains the following:
+To run this project, you will need the following:
 
-- 📄 **``Lab_x.pdf``**: A ``PDF`` guide with instructions to complete the session (currently only available in Spanish).
-- 💻 **``scr``**: a folder with ``.ipynb`` or ``.py`` files to complete.
-- 🎞️ **``data``**: A folder containing images to process.
-- 📝 **``template``**: A folder with a ``latex`` template used to generate the guide. You can reuse it to write your report.
-- 🧩 **``assets``**: Files to style or improve documentation.
-- 📖 **``README``**: With links to motivate the session or to introduce the theory concepts.
-
-The lab sessions folder are structured as follows:
-
-```bash
-.
-├── Lab_x.pdf
-├── src
-│   ├── lab_session.ipynb
-│   ├── lab_session.py
-│   └── ...
-├── data
-│   ├── image1.png
-│   ├── image2.png
-│   ├── video1.avi
-│   └── ...
-├── assets
-├── template
-└── README
-```
-
-## Expand
-If you want to learn more, we recommend checking out the following resources:
-
-- **[Book: *Programming Computer Vision with Python*](https://github.com/Ricky-Wilson/Programming-books/blob/master/PDF/OReilly.Programming.Computer.Vision.with.Python.Jun.2012.RETAIL.eBook-ELOHiM.pdf)**
-- **[Tutorials: PyImageSearch](https://pyimagesearch.com/category/tutorials/)**.  *Old but gold*: If you want to learn classic computer vision, check out the older pages of the archive.
+- A Raspberry Pi (tested on Raspberry Pi 3/4).
+- A PiCamera.
+- Python 3 installed on the Raspberry Pi.
+- OpenCV library.
+- Picamera module.
 
 
 
-## Typos and Errors
-
-If you spot a typo or notice a mistake, feel free to reach out or submit a pull request. We greatly appreciate your cooperation! 🤗
-
-## Get in Touch
-
-If you have suggestions for exercises or want to share your thoughts, feel free to contact us at iderodrigo@comillas.edu. Also, if you find this repository helpful, we would appreciate it if you could give it a star.
 
 
-<h2 align="center">Let's start!</h2>
-<p align="center">
-  <img src="https://media.giphy.com/media/26BGIqWh2R1fi6JDa/giphy.gif" width="300" style="margin-bottom: 20px;" />
-</p>
+## ✨ Notes
+
+- Ensure good lighting conditions for accurate pattern detection and object tracking.
+  
+
+## 📚 Contributions
+
+Contributions, issues, and feature requests are welcome! Feel free to fork this repository and submit a pull request.
+
+## 🙏 Acknowledgments
+
+- OpenCV documentation and tutorials for computer vision techniques.
+- The Raspberry Pi Foundation for providing affordable and versatile computing platforms.
+
+---
+
+Happy painting! 🚀
+
